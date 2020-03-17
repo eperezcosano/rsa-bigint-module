@@ -5,15 +5,19 @@
   "main": "index.cjs.js",
   "browser": "index.esm.js",
   "scripts": {
-    "build": "tsc && rollup -c",
+    "build": "tsc && node build.dts.js && rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "./types/rsa-bigint-module.d.ts",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^13.9.1",
     "bigint-conversion": "^2.1.1",
-    "bigint-crypto-utils": "^2.4.7",
-    "rollup": "^2.0.6"
+    "bigint-crypto-utils": "^2.4.7"
+  },
+  "devDependencies": {
+    "rollup": "^2.0.6",
+    "typescript": "^3.8.3"
   }
 }
